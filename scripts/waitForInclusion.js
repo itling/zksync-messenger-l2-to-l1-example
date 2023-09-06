@@ -8,7 +8,7 @@ async function main() {
   const greeting = process.env.GREETING
 
   const l1Provider = new ethers.providers.StaticJsonRpcProvider('https://goerli.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161')
-  const zkSyncProvider = new Provider('https://zksync2-testnet.zksync.dev')
+  const zkSyncProvider = new Provider('https://testnet.era.zksync.dev')
   const l1ContractAbi = require('../artifacts-zk/contracts/L1Contract.sol/L1Contract.json').abi
 
   const iface = new ethers.utils.Interface(l1ContractAbi)

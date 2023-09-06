@@ -10,6 +10,8 @@ async function main(hre) {
   const wallet = new Wallet(process.env.PRIVATE_KEY)
   const deployer = new Deployer(hre, wallet)
   const artifact = await deployer.loadArtifact('L2Contract')
+  const deploymentFee = await deployer.estimateDeployFee(artifact, []);
+  console.log('deploymentFee is ',deploymentFee)
   const l2Contract = await deployer.deploy(artifact, [])
 
   console.log(

@@ -5,7 +5,7 @@ async function main() {
   const privateKey = process.env.PRIVATE_KEY
   const l2ContractAddress = process.env.L2_CONTRACT
 
-  const zkSyncProvider = new Provider('https://zksync2-testnet.zksync.dev')
+  const zkSyncProvider = new Provider('https://testnet.era.zksync.dev')
   const wallet = new Wallet(privateKey, zkSyncProvider)
   const { abi } = require('../artifacts-zk/contracts/L2Contract.sol/L2Contract.json')
 
